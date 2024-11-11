@@ -1,0 +1,14 @@
+name: Clojure Deployment
+run-name: ${{ github.actor }} is testing a clojure deployment 👽
+on: [push]
+jobs:
+  clojure-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Attempting to build an uberjar in github actions"
+      - uses: actions/setup-java@v4
+        with:
+          version: 21
+      - run: |
+          echo "Attempting to download leiningen"
+          sudo apt install leiningen && echo "Successfully installed leiningen" || echo "Error installing leiningen"
