@@ -8,6 +8,7 @@ jobs:
       - run: echo "Attempting to build an uberjar in github actions"
       - uses: actions/setup-java@v4
         with:
+          distribution: 'temurin'
           java-version: 21
       - run: |
           echo "Attempting to download leiningen"
