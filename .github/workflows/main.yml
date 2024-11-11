@@ -8,7 +8,7 @@ jobs:
       - run: echo "Attempting to build an uberjar in github actions"
       - uses: actions/setup-java@v4
         with:
-          version: 21
+          java-version: 21
       - run: |
           echo "Attempting to download leiningen"
           sudo apt install leiningen && echo "Successfully installed leiningen" || echo "Error installing leiningen"
